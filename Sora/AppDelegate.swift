@@ -18,15 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         DispatchQueue.global().async {
-            let iCloudUrl: URL? = FileManager.default.url(forUbiquityContainerIdentifier: nil)
-            for _ in 0...100000 {
-                
-            }
-            if let iCloudUrl = iCloudUrl {
-                let iCloudDocument: URL = iCloudUrl.appendingPathComponent("Documents")
-                try! FileManager.default.createDirectory(at: iCloudDocument.appendingPathComponent("test_1"), withIntermediateDirectories: true, attributes: nil)
+            if let iCloudUrl = FileManager.default.url(forUbiquityContainerIdentifier: nil) {
+                SORAConstant.iCloudUrl = iCloudUrl
             }
         }
+        
         return true
     }
 
