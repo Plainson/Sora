@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		0C58657D24664B4200F0395A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C58657C24664B4200F0395A /* AppDelegate.swift */; };
 		0C58657F24664B4200F0395A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C58657E24664B4200F0395A /* SceneDelegate.swift */; };
-		0C58658124664B4200F0395A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C58658024664B4200F0395A /* ViewController.swift */; };
 		0C58658424664B4200F0395A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C58658224664B4200F0395A /* Main.storyboard */; };
 		0C58658724664B4200F0395A /* Sora.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0C58658524664B4200F0395A /* Sora.xcdatamodeld */; };
 		0C58658924664B4300F0395A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C58658824664B4300F0395A /* Assets.xcassets */; };
 		0C58658C24664B4300F0395A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C58658A24664B4300F0395A /* LaunchScreen.storyboard */; };
 		0CDB93E924C85DBE001F2FF0 /* SORAConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDB93E824C85DBE001F2FF0 /* SORAConstant.swift */; };
+		22FCEB7624CEA6B400E65C55 /* SORAUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FCEB7524CEA6B400E65C55 /* SORAUIViewController.swift */; };
+		22FCEB7824CEA70F00E65C55 /* SORAUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FCEB7724CEA70F00E65C55 /* SORAUIColor.swift */; };
+		22FCEB7A24CEAA8000E65C55 /* SORAPictureViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FCEB7924CEAA8000E65C55 /* SORAPictureViewerViewController.swift */; };
 		8C09B7E30E2D38C9CB0C3411 /* Pods_Sora.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AD49146BB4AAE66FC47EB3C /* Pods_Sora.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,7 +25,6 @@
 		0C58657924664B4200F0395A /* Sora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sora.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C58657C24664B4200F0395A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C58657E24664B4200F0395A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0C58658024664B4200F0395A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0C58658324664B4200F0395A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0C58658624664B4200F0395A /* Sora.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sora.xcdatamodel; sourceTree = "<group>"; };
 		0C58658824664B4300F0395A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -31,6 +32,9 @@
 		0C58658D24664B4300F0395A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C5865AF24664B7A00F0395A /* Sora.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sora.entitlements; sourceTree = "<group>"; };
 		0CDB93E824C85DBE001F2FF0 /* SORAConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SORAConstant.swift; sourceTree = "<group>"; };
+		22FCEB7524CEA6B400E65C55 /* SORAUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SORAUIViewController.swift; sourceTree = "<group>"; };
+		22FCEB7724CEA70F00E65C55 /* SORAUIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SORAUIColor.swift; sourceTree = "<group>"; };
+		22FCEB7924CEAA8000E65C55 /* SORAPictureViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SORAPictureViewerViewController.swift; sourceTree = "<group>"; };
 		502A43B6A10776D208E78701 /* Pods-Sora.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sora.debug.xcconfig"; path = "Target Support Files/Pods-Sora/Pods-Sora.debug.xcconfig"; sourceTree = "<group>"; };
 		7AD49146BB4AAE66FC47EB3C /* Pods_Sora.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sora.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E57CDD8C0D98FC6691A2D12 /* Pods-Sora-SoraUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sora-SoraUITests.debug.xcconfig"; path = "Target Support Files/Pods-Sora-SoraUITests/Pods-Sora-SoraUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -74,10 +78,11 @@
 		0C58657B24664B4200F0395A /* Sora */ = {
 			isa = PBXGroup;
 			children = (
+				22FCEB7324CEA65500E65C55 /* Main */,
 				0CDB93E724C85D5F001F2FF0 /* SORAManager */,
+				22FCEB7424CEA66C00E65C55 /* SORAUIKit */,
 				0C58657C24664B4200F0395A /* AppDelegate.swift */,
 				0C58657E24664B4200F0395A /* SceneDelegate.swift */,
-				0C58658024664B4200F0395A /* ViewController.swift */,
 				0C58658224664B4200F0395A /* Main.storyboard */,
 				0C58658824664B4300F0395A /* Assets.xcassets */,
 				0C58658A24664B4300F0395A /* LaunchScreen.storyboard */,
@@ -94,6 +99,23 @@
 				0CDB93E824C85DBE001F2FF0 /* SORAConstant.swift */,
 			);
 			path = SORAManager;
+			sourceTree = "<group>";
+		};
+		22FCEB7324CEA65500E65C55 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				22FCEB7924CEAA8000E65C55 /* SORAPictureViewerViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		22FCEB7424CEA66C00E65C55 /* SORAUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				22FCEB7524CEA6B400E65C55 /* SORAUIViewController.swift */,
+				22FCEB7724CEA70F00E65C55 /* SORAUIColor.swift */,
+			);
+			path = SORAUIKit;
 			sourceTree = "<group>";
 		};
 		3594AB56F459FDEC17F271CF /* Frameworks */ = {
@@ -234,9 +256,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C58658124664B4200F0395A /* ViewController.swift in Sources */,
 				0CDB93E924C85DBE001F2FF0 /* SORAConstant.swift in Sources */,
+				22FCEB7A24CEAA8000E65C55 /* SORAPictureViewerViewController.swift in Sources */,
 				0C58657D24664B4200F0395A /* AppDelegate.swift in Sources */,
+				22FCEB7824CEA70F00E65C55 /* SORAUIColor.swift in Sources */,
+				22FCEB7624CEA6B400E65C55 /* SORAUIViewController.swift in Sources */,
 				0C58658724664B4200F0395A /* Sora.xcdatamodeld in Sources */,
 				0C58657F24664B4200F0395A /* SceneDelegate.swift in Sources */,
 			);
@@ -385,7 +409,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Sora/Sora.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = B7AM928UT8;
 				INFOPLIST_FILE = Sora/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -393,11 +417,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Grass.Sora;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -408,7 +432,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Sora/Sora.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = B7AM928UT8;
 				INFOPLIST_FILE = Sora/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -416,11 +440,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Grass.Sora;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
