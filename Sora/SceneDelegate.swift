@@ -51,6 +51,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        let url: URL = URLContexts.first!.url
+        do {
+            let imageData: Data = try Data.init(contentsOf: url)
+            let image: UIImage = UIImage.init(data: imageData)!
+            let viewerViewController: SORAPictureViewerViewController = SORAPictureViewerViewController.init()
+            viewerViewController.image = image
+            let navigationController: UINavigationController = self.window?.rootViewController as! UINavigationController
+            viewerViewController.modalPresentationStyle = .fullScreen
+            navigationController.topViewController?.present(viewerViewController, animated: true, completion: nil)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
 
 }
 
