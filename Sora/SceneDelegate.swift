@@ -18,6 +18,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        while SORAConstant.iCloudUrl == nil {
+            SORAConstant.iCloudUrl = FileManager.default.url(forUbiquityContainerIdentifier: nil)
+        }
+        
+        try! FileManager.default.startDownloadingUbiquitousItem(at: SORAConstant.iCloudDocumentUrl!)
+        clearTrash()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -56,11 +63,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         do {
             let imageData: Data = try Data.init(contentsOf: url)
             let image: UIImage = UIImage.init(data: imageData)!
-            let viewerViewController: SORAPictureViewerViewController = SORAPictureViewerViewController.init()
-            viewerViewController.image = image
             let navigationController: UINavigationController = self.window?.rootViewController as! UINavigationController
-            viewerViewController.modalPresentationStyle = .fullScreen
-            navigationController.topViewController?.present(viewerViewController, animated: true, completion: nil)
+            if navigationController.topViewController!.isKind(of: SORAFilesViewController.self) {
+                let viewerViewController: SORAPictureViewerViewController = SORAPictureViewerViewController.init()
+                viewerViewController.image = image
+                navigationController.topViewController!.navigationController?.pushViewController(viewerViewController, animated: true)
+            } else {
+                let viewerViewController: SORAPictureViewerViewController = navigationController.topViewController as! SORAPictureViewerViewController
+                viewerViewController.changeImage(image: image)
+            }
         } catch {
             print(error.localizedDescription)
         }
