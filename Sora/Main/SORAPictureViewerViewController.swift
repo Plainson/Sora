@@ -39,4 +39,10 @@ class SORAPictureViewerViewController: SORAUIViewController {
             view!.bottom.equalTo()(self.view.mas_safeAreaLayoutGuideBottom)?.offset()
         }
     }
+    
+    // MARK: - 更改显示的图片。
+    
+    func changeImage(image: UIImage) {
+        self.imageView.image = image
+    }
 }
