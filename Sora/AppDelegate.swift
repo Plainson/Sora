@@ -17,11 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        DispatchQueue.global().async {
-            if let iCloudUrl = FileManager.default.url(forUbiquityContainerIdentifier: nil) {
-                SORAConstant.iCloudUrl = iCloudUrl
-            }
-        }
+//        DispatchQueue.global().async {
+//            if let iCloudUrl = FileManager.default.url(forUbiquityContainerIdentifier: nil) {
+//                SORAConstant.iCloudUrl = iCloudUrl
+//            }
+//        }
         
         return true
     }
