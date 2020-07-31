@@ -21,6 +21,14 @@ class SORAConstant {
         }
     }
     
+    static var screenWidth: CGFloat {
+        return UIScreen.main.bounds.width
+    }
+    
+    static var screenHeight: CGFloat {
+        return UIScreen.main.bounds.height
+    }
+    
     static var thumbSize: CGSize = CGSize.init(width: SORAConstant.ImageDisplayView.itemSizeWidth * 2, height: SORAConstant.ImageDisplayView.itemSizeHeight * 2)
     
     struct ImageDisplayView {
