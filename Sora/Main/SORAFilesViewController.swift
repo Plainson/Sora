@@ -32,28 +32,24 @@ class SORAFilesViewController: SORAUIViewController {
         if self.title == nil {
             self.navigationItem.title = internationalization(text: "浏览")
         }
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         
         // MARK: Image display view.
         
         self.imageDisplayView = SORAImageDisplayView.init(frame: self.view.frame)
         self.view.addSubview(self.imageDisplayView)
         self.imageDisplayView.imageCollectionDidSelectItemHandle = { [weak self] (indexPath) in
-            do {
-                if self!.imageDisplayView.contentsOfPaths[indexPath.row].isImage() {
-                    let viewerViewController: SORAPictureViewerViewController = SORAPictureViewerViewController.init()
-                    let imageData: Data = try Data.init(contentsOf: self!.imageDisplayView.contentsOfPaths[indexPath.row])
-                    let image: UIImage = UIImage.init(data: imageData)!
-                    viewerViewController.title = self!.imageDisplayView.contentsOfPaths[indexPath.row].lastPathComponent.components(separatedBy: ".").first!
-                    viewerViewController.image = image
-                    self!.navigationController?.pushViewController(viewerViewController, animated: true)
-                } else {
-                    let filesViewController: SORAFilesViewController = SORAFilesViewController.init()
-                    filesViewController.title = self!.imageDisplayView.contentsOfPaths[indexPath.row].lastPathComponent
-                    filesViewController.path = self!.imageDisplayView.contentsOfPaths[indexPath.row].path
-                    self!.navigationController?.pushViewController(filesViewController, animated: true)
-                }
-            } catch {
-                print(error.localizedDescription)
+            if self!.imageDisplayView.contentsOfPaths[indexPath.row].isImage() {
+                let image: UIImage = UIImage.init(contentsOfFile: self!.imageDisplayView.contentsOfPaths[indexPath.row].path)!
+                let viewerViewController: SORAPictureViewerViewController = SORAPictureViewerViewController.init()
+                viewerViewController.image = image
+                viewerViewController.modalPresentationStyle = .formSheet
+                self!.present(viewerViewController, animated: true, completion: nil)
+            } else {
+                let filesViewController: SORAFilesViewController = SORAFilesViewController.init()
+                filesViewController.title = self!.imageDisplayView.contentsOfPaths[indexPath.row].lastPathComponent
+                filesViewController.path = self!.imageDisplayView.contentsOfPaths[indexPath.row].path
+                self!.navigationController?.pushViewController(filesViewController, animated: true)
             }
         }
         
@@ -115,6 +111,10 @@ class SORAFilesViewController: SORAUIViewController {
                 self.activityIndicatorView?.stopAnimating()
             }
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
 }
 
