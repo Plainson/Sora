@@ -16,9 +16,10 @@
 		0CDB93E924C85DBE001F2FF0 /* SORAConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDB93E824C85DBE001F2FF0 /* SORAConstant.swift */; };
 		22122EBE24D0FCD1003CA826 /* SORAFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22122EBD24D0FCD1003CA826 /* SORAFunction.swift */; };
 		22122EC024D1522F003CA826 /* SORAUIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22122EBF24D1522F003CA826 /* SORAUIActivityIndicatorView.swift */; };
+		2256FB4524D3F12400B319F4 /* SORAImageDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2256FB4424D3F12300B319F4 /* SORAImageDisplayView.swift */; };
+		22AFBDC724D25DF40072784B /* SORAUIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AFBDC624D25DF30072784B /* SORAUIScrollView.swift */; };
 		22B79F6824CFEC42009E1B55 /* SORAFilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B79F6724CFEC42009E1B55 /* SORAFilesViewController.swift */; };
 		22B79F6B24CFF8AD009E1B55 /* SORAUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B79F6A24CFF8AD009E1B55 /* SORAUIView.swift */; };
-		22B79F6D24CFF901009E1B55 /* SORAImageDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B79F6C24CFF901009E1B55 /* SORAImageDisplayView.swift */; };
 		22B79F6F24CFF9BF009E1B55 /* SORAUICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B79F6E24CFF9BF009E1B55 /* SORAUICollectionView.swift */; };
 		22B79F7224D0012B009E1B55 /* SORAImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B79F7124D0012B009E1B55 /* SORAImageCell.swift */; };
 		22B79F7424D001B3009E1B55 /* SORAUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B79F7324D001B3009E1B55 /* SORAUILabel.swift */; };
@@ -43,9 +44,10 @@
 		0CDB93E824C85DBE001F2FF0 /* SORAConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SORAConstant.swift; sourceTree = "<group>"; };
 		22122EBD24D0FCD1003CA826 /* SORAFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SORAFunction.swift; sourceTree = "<group>"; };
 		22122EBF24D1522F003CA826 /* SORAUIActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SORAUIActivityIndicatorView.swift; sourceTree = "<group>"; };
+		2256FB4424D3F12300B319F4 /* SORAImageDisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SORAImageDisplayView.swift; sourceTree = "<group>"; };
+		22AFBDC624D25DF30072784B /* SORAUIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SORAUIScrollView.swift; sourceTree = "<group>"; };
 		22B79F6724CFEC42009E1B55 /* SORAFilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SORAFilesViewController.swift; sourceTree = "<group>"; };
 		22B79F6A24CFF8AD009E1B55 /* SORAUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SORAUIView.swift; sourceTree = "<group>"; };
-		22B79F6C24CFF901009E1B55 /* SORAImageDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SORAImageDisplayView.swift; sourceTree = "<group>"; };
 		22B79F6E24CFF9BF009E1B55 /* SORAUICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SORAUICollectionView.swift; sourceTree = "<group>"; };
 		22B79F7124D0012B009E1B55 /* SORAImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SORAImageCell.swift; sourceTree = "<group>"; };
 		22B79F7324D001B3009E1B55 /* SORAUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SORAUILabel.swift; sourceTree = "<group>"; };
@@ -124,7 +126,7 @@
 		22B79F6924CFF878009E1B55 /* SORACustomView */ = {
 			isa = PBXGroup;
 			children = (
-				22B79F6C24CFF901009E1B55 /* SORAImageDisplayView.swift */,
+				2256FB4424D3F12300B319F4 /* SORAImageDisplayView.swift */,
 				22B79F7124D0012B009E1B55 /* SORAImageCell.swift */,
 			);
 			path = SORACustomView;
@@ -149,6 +151,7 @@
 				22B79F7324D001B3009E1B55 /* SORAUILabel.swift */,
 				22B79F7524D001E4009E1B55 /* SORAUIFont.swift */,
 				22122EBF24D1522F003CA826 /* SORAUIActivityIndicatorView.swift */,
+				22AFBDC624D25DF30072784B /* SORAUIScrollView.swift */,
 			);
 			path = SORAUIKit;
 			sourceTree = "<group>";
@@ -295,8 +298,9 @@
 				0CDB93E924C85DBE001F2FF0 /* SORAConstant.swift in Sources */,
 				22FCEB7A24CEAA8000E65C55 /* SORAPictureViewerViewController.swift in Sources */,
 				0C58657D24664B4200F0395A /* AppDelegate.swift in Sources */,
-				22B79F6D24CFF901009E1B55 /* SORAImageDisplayView.swift in Sources */,
+				22AFBDC724D25DF40072784B /* SORAUIScrollView.swift in Sources */,
 				22B79F7624D001E4009E1B55 /* SORAUIFont.swift in Sources */,
+				2256FB4524D3F12400B319F4 /* SORAImageDisplayView.swift in Sources */,
 				22FCEB7824CEA70F00E65C55 /* SORAUIColor.swift in Sources */,
 				22B79F7224D0012B009E1B55 /* SORAImageCell.swift in Sources */,
 				22122EBE24D0FCD1003CA826 /* SORAFunction.swift in Sources */,
