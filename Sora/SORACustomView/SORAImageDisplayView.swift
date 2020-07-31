@@ -55,6 +55,17 @@ class SORAImageDisplayView: SORAUIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Remove delete operation.
+    
+    func removeDelegateOperation() {
+        self.imageCollectionView.delegate = nil
+    }
+    
+    // MARK: - Add delete operation.
+    
+    func addDelegateOperation() {
+        self.imageCollectionView.delegate = self
+    }
 }
 
 // MARK: - UICollectionViewDataSource, UICollectionViewDelegate.
