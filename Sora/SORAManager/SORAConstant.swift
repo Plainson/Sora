@@ -7,7 +7,11 @@
 //
 
 import Foundation
+#if iOS || iPadOS
 import UIKit
+#elseif macOS
+import Cocoa
+#endif
 
 class SORAConstant {
     
@@ -22,11 +26,19 @@ class SORAConstant {
     }
     
     static var screenWidth: CGFloat {
+        #if iOS || iPadOS
         return UIScreen.main.bounds.width
+        #elseif macOS
+        return 0.0
+        #endif
     }
     
     static var screenHeight: CGFloat {
+        #if iOS || iPadOS
         return UIScreen.main.bounds.height
+        #elseif macOS
+        return 0.0
+        #endif
     }
     
     static var thumbSize: CGSize = CGSize.init(width: SORAConstant.ImageDisplayView.itemSizeWidth * 2, height: SORAConstant.ImageDisplayView.itemSizeHeight * 2)
