@@ -21,14 +21,14 @@
 			</array>
 		</dict>
 		<dict>
-			<key>LSHandlerRank</key>
-			<string>Owner</string>
 			<key>CFBundleTypeIconFiles</key>
 			<array/>
 			<key>CFBundleTypeName</key>
 			<string>Content</string>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>LSHandlerRank</key>
+			<string>Owner</string>
 			<key>LSItemContentTypes</key>
 			<array>
 				<string>public.content</string>
