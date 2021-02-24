@@ -20,6 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         while SORAConstant.iCloudUrl == nil {
             SORAConstant.iCloudUrl = FileManager.default.url(forUbiquityContainerIdentifier: nil)
         }
+        try! FileManager.default.createDirectory(at: SORAConstant.iCloudDocumentUrl!.appendingPathComponent("test"), withIntermediateDirectories: true, attributes: nil)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

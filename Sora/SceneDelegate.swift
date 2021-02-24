@@ -22,8 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         while SORAConstant.iCloudUrl == nil {
             SORAConstant.iCloudUrl = FileManager.default.url(forUbiquityContainerIdentifier: nil)
         }
+        try! FileManager.default.createDirectory(at: SORAConstant.iCloudDocumentUrl!.appendingPathComponent("test"), withIntermediateDirectories: true, attributes: nil)
         
-        try! FileManager.default.startDownloadingUbiquitousItem(at: SORAConstant.iCloudDocumentUrl!)
         clearTrash()
     }
 
