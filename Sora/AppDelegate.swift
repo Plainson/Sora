@@ -17,6 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        while SORAConstant.iCloudUrl == nil {
+            SORAConstant.iCloudUrl = FileManager.default.url(forUbiquityContainerIdentifier: nil)
+        }
+        #if Release
+        try! FileManager.default.createDirectory(at: SORAConstant.iCloudDocumentUrl!.appendingPathComponent("test"), withIntermediateDirectories: true, attributes: nil)
+        #endif
+        
+        clearTrash()
+        
         return true
     }
 
