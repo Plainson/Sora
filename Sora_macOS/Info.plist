@@ -63,7 +63,7 @@
 	<string>NSApplication</string>
 	<key>NSUbiquitousContainers</key>
 	<dict>
-		<key>iCloud.com.Grass.Sora</key>
+		<key>iCloud.com.grass.shizuku.Sora</key>
 		<dict>
 			<key>NSUbiquitousContainerIsDocumentScopePublic</key>
 			<true/>
